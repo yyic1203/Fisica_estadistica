@@ -82,7 +82,7 @@ PROGRAM tarea_1_FA
 	DO n=1, numa
 		sto=2.5D0*RJ+RJ*dlog(qt(n)*qe(n))
 		uto=1.5D0*RJ*T
-		gto=RJ*T*dlog(qt(n)*qe(n)/NA)
+		gto=-RJ*T*dlog(qt(n)*qe(n)/NA)
 		eto(n)= (DABS(ve(n)-sto(n))/ve(n))*100.0D0
 		WRITE(*,'(A,F9.3,A)') "La entropía total de " // TRIM(sima(n)) // " es: ", sto(n), " J/K mol"
 		WRITE(*,'(A,F9.3,A)') "La energía interna total de " // TRIM(sima(n)) // " es: ", uto(n), " J/mol"
